@@ -1,5 +1,8 @@
 APP_NAME=angularjs-boilerplate
 PORT=9987
+ORIGIN=origin
+DEST_BRANCH=master
+
 run:
 	npm start
 
