@@ -7,7 +7,8 @@
     "start": "http-server public -p 9398"
   },
   "dependencies": {
-       "http-server" : "0.11.1"
+    "http-server": "0.11.1",
+    "pushstate-server": "^3.0.1"
   },
   "author": "Raghavendra Gautam B(@rgautam98)",
   "license": "ISC"

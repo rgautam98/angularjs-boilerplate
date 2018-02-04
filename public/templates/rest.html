@@ -6,9 +6,12 @@
 </div>
 
 <div id="two">
-    <input name="foo" ng-model="postdat.data" />
     <button ng-click="PostData()"> Post The Data </button>
+    
+    <h1 ng-show="method">{{method}} Response is </h1>
     <p ng-show="pd">
-        The data received is:  {{pd.data}}
+        The data received is: 
+        
+        <pre> {{ pd }} </pre>
     </p>
 </div>

@@ -49,7 +49,7 @@ angular.module('test', [
     ])
     .run(['$rootScope', '$timeout', '$state', '$window',
         function($rootScope, $timeout, $state, $window){
-            $rootScope.host = "http://172.18.16.167:4000/";
+            $rootScope.host = "http://httpbin.org";
         }
 
     ])

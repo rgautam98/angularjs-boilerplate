@@ -1,27 +1,34 @@
 angular.module('test')
 	.controller('restCtrl', ['$rootScope', '$scope', '$http', '$state', '$location', "restService",
 		function ($rootScope, $scope, $http, $state, $location, restService) {
+
+            $scope.method = false;
             $scope.getData = function(){
-                restService.getData().then(function(data){
-					console.log(data.data);
-					console.log("The data got is :  " + data.data.name)
-                    $scope.data = data;
+                restService.getData().then(function(resp){
+                    console.log("The GET request is a success");
+                    console.log(resp.data);
+                    
+                    $scope.method = "GET";
+                    $scope.pd = JSON.stringify(resp.data, null, 4);
                 }, function(err){
                     console.log(err);
                 });
             }
 
-            $scope.postdat = {}
-
             $scope.PostData = function(){
                 console.log("Running the post function");
                 console.log($rootScope.host);
-                restService.PostData($scope.postdat).then(function(data){
-                    $scope.pd = data;
+                restService.PostData({"foo": "bar"}).then(function(resp){
+                    console.log("The POST request is success");
+                    console.log(resp.data);
+
+                    $scope.method = "POST";                    
+                    $scope.pd = JSON.stringify(resp.data, null, 4);
                 }, function(err){
                     console.log(err);
                 });
             }
 
             //
-		}]);
+        }
+    ]);
