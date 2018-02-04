@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="test">
+
+<head>
+    <title>
+
+    </title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Vendor/CSS -->
+</head>
+
+<body>
+    <header>
+        <div class='menubar'>
+            <div data-ng-include src="'templates/header.html'"></div>
+        </div>
+    </header>
+    <ui-view></ui-view>
+    <!-- build:js /js/site.js -->
+    <!-- Angular components -->
+    <script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+    <script type="text/javascript" src="routes.js"></script>
+    <!-- services -->
+    <script type="text/javascript" src="services/restService.js"></script>
+
+    <!-- controllers -->
+    <script type="text/javascript" src="controllers/mainCtrl.js"></script>
+    <script type="text/javascript" src="controllers/localCtrl.js"></script>
+    <script type="text/javascript" src="controllers/sessionCtrl.js"></script>
+    <script type="text/javascript" src="controllers/restCtrl.js"></script>
+
+
+</body>
+
+</html>

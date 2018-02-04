@@ -1,0 +1,14 @@
+{
+  "name": "angularjs-boilerplate",
+  "version": "1.0.0",
+  "description": "This is my angularjs boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server public -p 9398"
+  },
+  "dependencies": {
+       "http-server" : "0.11.1"
+  },
+  "author": "Raghavendra Gautam B(@rgautam98)",
+  "license": "ISC"
+}

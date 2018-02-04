@@ -1,0 +1,43 @@
+<div id="set">
+        <h1> Set the key : value pairs in the data </h1>
+        <input name="key" type="text" placeholder="Key" ng-model="data.SetKey"/>
+        <input name="value" type="text" placeholder="Value" ng-model="data.SetValue" />
+        <button ng-click="SetData()"> Set </button>
+</div>
+
+<br /> <br />
+
+<div id="GetAll">
+        <h1> Get All the data in Session Storage </h1>
+        <button ng-click="GetAllData()"> Get All Data </button>
+        <div id="DataTable" ng-show="dataTable">
+
+            <table>
+                <tr>
+                      <th>Key</th>
+                      <th>Value</th>
+                </tr>
+                <tr ng-repeat="kv in dataTable">
+                      <td>{{kv.key}}</td>
+                      <td>{{kv.value}}</td>
+                </tr>
+            </table>
+        </div>
+        <button ng-click="CloseTable()"> Close </button>
+</div>
+
+
+<div id="get">
+        <h1> Get the data based on the key </h1>
+        <input name="key" type="text" placeholder="Key" ng-model="data.GetKey"/>
+        <button ng-click="GetData()"> Get </button>
+        <p ng-show="data.StorageData"> <span ng-bind="data.GetKey"></span> : <span ng-bind="data.StorageData"></span> </p>
+</div>
+
+<br /> <br />
+
+<div id="del">
+        <h1> Delete the data based on the key </h1>
+        <input name="key" type="text" placeholder="Key" ng-model="data.DelKey"/>
+        <button ng-click="DelData()"> Delete </button>
+</div>

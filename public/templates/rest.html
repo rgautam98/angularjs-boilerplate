@@ -1,0 +1,14 @@
+<div id="one">
+    <button ng-click="getData()"> Get The Data </button>
+    <p ng-show="data">
+        The data received is:  {{data.data.name}}
+    </p>
+</div>
+
+<div id="two">
+    <input name="foo" ng-model="postdat.data" />
+    <button ng-click="PostData()"> Post The Data </button>
+    <p ng-show="pd">
+        The data received is:  {{pd.data}}
+    </p>
+</div>
