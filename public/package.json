@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.14",
-    "angular": "^1.6.9"
+    "angular": "^1.6.9",
+    "angular-sanitize": "^1.6.9"
   }
 }

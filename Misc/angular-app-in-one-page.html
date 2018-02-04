@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.7/angular-sanitize.min.js"></script>
+  <!-- BEGIN disable refresh -->
+  <script type="text/javascript">
+    //Including ngSanitize ensures html links get properly sanitized
+    var app = angular.module("app", ["ngSanitize"]);
+    //If you use this code instead no html links get displayed 
+    //var app = angular.module("app", []);
+
+    app.controller("mainController", function($scope) {
+      var main = this;
+
+      main.links = [
+        "<a href='http://google.com'>Google</a>",
+        "<a href='http://odetocode.com'>OdeToCode</a>",
+        "<a href='http://twitter.com'>Twitter</a>"
+      ];
+    });
+  </script>
+
+</head>
+
+<body ng-app="app">
+  <section ng-controller="mainController as main">
+    <nav>
+      <ul>
+        <li ng-repeat="link in main.links" ng-bind-html="link">
+        </li>
+      </ul>
+    </nav>
+  </section>
+</body>
+
+</html>

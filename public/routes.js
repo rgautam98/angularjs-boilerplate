@@ -1,5 +1,6 @@
 angular.module('test', [
         'ui.router',
+        'ngSanitize'
     ])
     .config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
         function($locationProvider, $stateProvider, $urlRouterProvider) {
